@@ -1,0 +1,6 @@
+<h1>ビデオメモ詳細画面</h1>
+<p>タイトル: <%= @video.title %></p>
+<p>URL: <%= @video.url %></p>
+<p>ステータス： <%= @video.status %></p>
+<p><%= link_to '新しく動画メモを投稿する', new_video_path %></p>
+<p><%= link_to 'ビデオメモ一覧画面にもどる', videos_path %></p>
