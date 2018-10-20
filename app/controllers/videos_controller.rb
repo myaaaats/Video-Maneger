@@ -16,6 +16,7 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.new(video_params)
+    @video.user_id = current_user.id
     if @video.save
       # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
       redirect_to videos_path, notice: "ビデオメモを作成しました！"
@@ -46,6 +47,7 @@ class VideosController < ApplicationController
 
   def confirm
     @video = Video.new(video_params)
+    @video.user_id = current_user.id
     render :new if @video.invalid?
   end
 
