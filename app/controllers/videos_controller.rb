@@ -1,9 +1,10 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :show, :new, :edit, :update, :destroy]
+  before_action :own_video?, only: [:show, :edit, :update, :destroy]
 
   def index
-    @videos = Video.all
+    @videos = Video.where(user_id: current_user.id)
   end
 
   def new
@@ -27,6 +28,7 @@ class VideosController < ApplicationController
   end
 
   def show
+  #binding.pry
   end
 
   def edit
@@ -59,5 +61,11 @@ class VideosController < ApplicationController
 
   def set_video
     @video = Video.find(params[:id])
+  end
+
+  def own_video?
+    if @video.user_id != current_user.id
+      redirect_to user_session_path
+    end
   end
 end
