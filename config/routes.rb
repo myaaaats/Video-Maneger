@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'videos#index'
+  root 'top#index'
 
   resources :videos do
     resources :comments
