@@ -1,5 +1,7 @@
 {
   "name": "video-manager",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }

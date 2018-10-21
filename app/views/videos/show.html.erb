@@ -2,5 +2,19 @@
 <p>タイトル: <%= @video.title %></p>
 <p>URL: <%= @video.url %></p>
 <p>ステータス： <%= @video.status %></p>
+
+<p>コメント一覧</p>
+
+  <!-- このcomments_areaというHTMLのidを取得して、そのdivの部分だけを更新する -->
+<div id="comments_area">
+  <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/index', locals: { comments: @comments, video: @video } %>
+</div>
+
+<!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+<%= render partial: 'comments/form', locals: { comment: @comment, video: @video } %>
+<%= link_to '編集', edit_video_path(@video) %> |
+<%= link_to '戻る', videos_path %>
+
 <p><%= link_to '新しく動画メモを投稿する', new_video_path %></p>
 <p><%= link_to 'ビデオメモ一覧画面にもどる', videos_path %></p>

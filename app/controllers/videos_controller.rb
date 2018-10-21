@@ -28,7 +28,8 @@ class VideosController < ApplicationController
   end
 
   def show
-  #binding.pry
+  @comments = @video.comments
+  @comment = @video.comments.build
   end
 
   def edit
