@@ -11,9 +11,9 @@
     <td><%= video.title %></td>
     <td><%= video.url %></td>
     <td><%= video.status %></td>
-    <td><%= link_to '詳細確認', video_path(video.id) %></td>
-    <td><%= link_to "編集する", edit_video_path(video.id) %></td>
-    <td><%= link_to '削除する', video_path(video.id), method: :delete, data: { confirm: '本当に編集していいですか？' } %></td>
+    <td><%= link_to '詳細確認', video_path(video.id), class: "btn btn-primary"%></td>
+    <td><%= link_to "編集する", edit_video_path(video.id), class: "btn btn-warning" %></td>
+    <td><%= link_to '削除する', video_path(video.id), class: "btn btn-danger", method: :delete, data: { confirm: '本当に編集していいですか？' } %></td>
   </tr>
 <% end %>
 </table>
