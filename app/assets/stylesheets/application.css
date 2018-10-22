@@ -14,6 +14,7 @@
  *= require_self
  */
 header {
+  height: 54px;
   background-color: #9F81F7;
 }
 
@@ -23,6 +24,7 @@ footer {
 header ul {
   margin: 0 auto;
   list-style: none;
+  line-height: 54px;
 }
 header ul a {
   display: block;
