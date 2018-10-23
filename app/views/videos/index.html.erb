@@ -1,17 +1,11 @@
 <div class="index">
   <h1>動画一覧</h1>
   <table align="center">
-    <tr>
-      <th>タイトル</th>
-      <th>URL</th>
-      <th>ステータス</th>
-    </tr>
-
     <% @videos.each do |video| %>
+      <tr><td><%= video.title %></td></tr>
+      <tr><td><%= video.url %></td></tr>
+      <tr><td><%= video.status %></td></tr>
       <tr>
-        <td><%= video.title %></td>
-        <td><%= video.url %></td>
-        <td><%= video.status %></td>
         <td><%= link_to '詳細確認', video_path(video.id), class: "btn btn-primary" %></td>
         <td><%= link_to "編集する", edit_video_path(video.id), class: "btn btn-warning" %></td>
         <td><%= link_to '削除する', video_path(video.id), class: "btn btn-danger", method: :delete, data: { confirm: '本当に編集していいですか？' } %></td>
