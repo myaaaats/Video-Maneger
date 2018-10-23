@@ -17,6 +17,7 @@
         <td><%= link_to '削除する', video_path(video.id), class: "btn btn-danger", method: :delete, data: { confirm: '本当に編集していいですか？' } %></td>
       </tr>
     <% end %>
+    <%= paginate @videos %>
   </table>
   <div class="new_botan">
     <%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %>
