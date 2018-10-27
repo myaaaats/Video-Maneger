@@ -4,7 +4,7 @@ class VideosController < ApplicationController
   before_action :own_video?, only: [:show, :edit, :update, :destroy]
 
   def index
-    @videos = Video.where(user_id: current_user.id).page(params[:page]).per(5)
+    @videos = Video.where(user_id: current_user.id).reverse_order.page(params[:page]).per(5)
   end
 
   def new
