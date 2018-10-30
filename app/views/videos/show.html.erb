@@ -14,7 +14,7 @@
   </div>
   <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
   <%= render partial: 'comments/form', locals: { comment: @comment, video: @video } %>
-  <div>
+  <div class="padding-20px">
     <%= link_to '編集', edit_video_path(@video), class: "btn btn-warning" %> |
     <%= link_to '戻る', videos_path, class: "btn btn-primary" %>
   </div>
