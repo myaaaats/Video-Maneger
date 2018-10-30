@@ -1,7 +1,8 @@
 <% comments.each do |comment| %>
   <% if comment.id.present? %>
     <li>
-      <p><%= comment.content %></p>
+      <%= comment.content %>
+      <%= link_to '削除', video_comment_path(video.id, comment.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %>
     </li>
   <% end %>
 <% end %>

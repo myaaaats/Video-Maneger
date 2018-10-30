@@ -14,6 +14,14 @@ class CommentsController < ApplicationController
     end
   end
 
+
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to video_path(@comment.video_id), notice:"コメントを削除しました！"
+  end
+
   private
   # ストロングパラメーター
   def comment_params
