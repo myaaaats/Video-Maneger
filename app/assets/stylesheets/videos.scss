@@ -13,3 +13,22 @@
 .padding-20px {
   padding: 20px;
 }
+
+.box {
+    background: #dcefff;
+    width: 1000px;
+    margin:  2rem auto;
+}
+.box .box-title {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box p {
+    padding: 15px 5px;
+    margin: 0;
+}
