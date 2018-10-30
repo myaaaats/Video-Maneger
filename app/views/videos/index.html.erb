@@ -7,7 +7,7 @@
       <div>
         <%= link_to '詳細確認', video_path(video.id), class: "btn btn-primary" %>
         <%= link_to "編集する", edit_video_path(video.id), class: "btn btn-warning" %>
-        <%= link_to '削除する', video_path(video.id), class: "btn btn-danger", method: :delete, data: { confirm: '本当に編集していいですか？' } %>
+        <%= link_to '削除する', video_path(video.id), class: "btn btn-danger", method: :delete, data: { confirm: '本当に削除していいですか？' } %>
       </div>
     <% end %>
     <%= paginate @videos %>
