@@ -65,7 +65,7 @@ class VideosController < ApplicationController
 
   def own_video?
     if @video.user_id != current_user.id
-      redirect_to user_session_path
+      redirect_to root_path
     end
   end
 end
