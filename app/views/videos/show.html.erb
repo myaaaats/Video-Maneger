@@ -1,8 +1,10 @@
 <div class="index">
   <h1>ビデオメモ詳細画面</h1>
-  <div><h3><%= @video.title %></h3></div>
-  <div><%= @video.url %></div>
-  <div><%= @video.status %></div>
+  <div class="box">
+    <div class="box-title"><%= @video.title %></div>
+    <div><%= @video.url %></div>
+    <div><%= image_tag 'status.png', :size => '16x16'%><%= @video.status %></div>
+  </div>
   <div>
     <h2>コメント一覧</h2>
 
