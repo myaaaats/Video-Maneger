@@ -1,19 +1,21 @@
-<h3>以下の内容で、送信する。</h3>
+<div class="center">
+  <h3>以下の内容で、送信する。</h3>
 
-<%= form_with(model: @video, url: videos_path, local: true) do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :url %>
-  <%= form.hidden_field :status %>
+  <%= form_with(model: @video, url: videos_path, local: true) do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :url %>
+    <%= form.hidden_field :status %>
 
-  <p>タイトル:<%= @video.title %></p>
-  <p>URL:<%= @video.url %></p>
-  <p>ステータス:<%= @video.status %></p>
-  <%= form.submit  "登録する" %>
-<% end %>
+    <div><p>タイトル:<%= @video.title %></p></div>
+    <div><p>URL:<%= @video.url %></p></div>
+    <div><p>ステータス:<%= @video.status %></p></div>
+    <%= form.submit  "登録する" %>
+  <% end %>
 
-<%= form_with(model: @video, url: new_video_path, local: true, method: 'get') do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :url %>
-  <%= form.hidden_field :status %>
-  <%= form.submit "もどる", name: 'back' %>
-<% end %>
+  <%= form_with(model: @video, url: new_video_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :url %>
+    <%= form.hidden_field :status %>
+    <%= form.submit "もどる", name: 'back' %>
+  <% end %>
+</div>
