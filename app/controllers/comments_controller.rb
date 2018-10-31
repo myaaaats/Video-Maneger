@@ -1,10 +1,7 @@
 class CommentsController < ApplicationController
-  # コメントを保存、投稿するためのアクションです。
   def create
-    # Videoをパラメータの値から探し出し,Videoに紐づくcommentsとしてbuildします。
     @video = Video.find(params[:video_id])
     @comment = @video.comments.build(comment_params)
-    # クライアント要求に応じてフォーマットを変更
     respond_to do |format|
       if @comment.save
         format.js { render :index }
@@ -23,7 +20,6 @@ class CommentsController < ApplicationController
   end
 
   private
-  # ストロングパラメーター
   def comment_params
     params.require(:comment).permit(:video_id, :content)
   end

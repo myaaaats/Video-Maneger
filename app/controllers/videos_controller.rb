@@ -18,17 +18,15 @@ class VideosController < ApplicationController
   def create
     @video = current_user.video.build(video_params)
     if @video.save
-      # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
       redirect_to videos_path, notice: "ビデオメモを作成しました！"
     else
-      # 入力フォームを再描画します。
       render 'new'
     end
   end
 
   def show
-  @comments = @video.comments
-  @comment = @video.comments.build
+    @comments = @video.comments
+    @comment = @video.comments.build
   end
 
   def edit
@@ -54,7 +52,7 @@ class VideosController < ApplicationController
   end
 
   private
-  
+
   def video_params
     params.require(:video).permit(:title, :url, :status)
   end
