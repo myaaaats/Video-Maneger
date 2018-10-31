@@ -7,14 +7,10 @@
   </div>
   <div>
     <h2>コメント一覧</h2>
-
-    <!-- このcomments_areaというHTMLのidを取得して、そのdivの部分だけを更新する -->
     <div id="comments_area">
-      <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
       <%= render partial: 'comments/index', locals: { comments: @comments, video: @video } %>
     </div>
   </div>
-  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
   <%= render partial: 'comments/form', locals: { comment: @comment, video: @video } %>
   <div class="padding-20px">
     <%= link_to '編集', edit_video_path(@video), class: "btn btn-warning" %> |
