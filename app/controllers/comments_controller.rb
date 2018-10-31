@@ -11,8 +11,6 @@ class CommentsController < ApplicationController
     end
   end
 
-
-
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
@@ -20,6 +18,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:video_id, :content)
   end
