@@ -1,7 +1,7 @@
 <% comments.each do |comment| %>
   <% if comment.id.present? %>
     <li>
-      <%= comment.content %>
+      <div><%= comment.content %></div><div><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></div>
       <%= link_to '削除', video_comment_path(video.id, comment.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %>
     </li>
   <% end %>
