@@ -16,7 +16,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = current_user.video.build(video_params)
+    @video = current_user.videos.build(video_params)
     if @video.save
       redirect_to videos_path, notice: "ビデオメモを作成しました！"
     else
@@ -46,7 +46,7 @@ class VideosController < ApplicationController
   end
 
   def confirm
-    @video = current_user.video.build(video_params)
+    @video = current_user.videos.build(video_params)
     render :new if @video.invalid?
   end
 
