@@ -2,7 +2,7 @@
   <h1>ビデオメモ詳細画面</h1>
   <div class="box">
     <div class="box-title"><%= @video.title %></div>
-    <div><iframe src="<%= @video.url %>" width="640" height="480"></iframe><div>
+    <div><%= @video.url %></div>
     <div><%= image_tag 'status.png', :size => '16x16'%><%= @video.status %></div>
   </div>
   <div>
