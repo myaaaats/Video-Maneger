@@ -21,6 +21,7 @@ html {
 header {
   height: 54px;
   background-color: #9F81F7;
+  margin-bottom: 140px;
 }
 header ul {
   margin: 0 auto;
