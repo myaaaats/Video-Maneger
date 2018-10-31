@@ -14,12 +14,12 @@
  *= require_self
  *= require bootstrap/dist/css/bootstrap.min
  */
+html {
+  min-height: 100%;
+  position: relative;
+}
 header {
   height: 54px;
-  background-color: #9F81F7;
-}
-
-footer {
   background-color: #9F81F7;
 }
 header ul {
@@ -35,8 +35,12 @@ header ul a {
   display: inline;
 }
 footer {
+  background-color: #9F81F7;
   margin: 0 auto;
   list-style: none;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 footer p {
   display: block;
