@@ -46,8 +46,7 @@ class VideosController < ApplicationController
   end
 
   def confirm
-    @video = Video.new(video_params)
-    @video.user_id = current_user.id
+    @video = current_user.video.build(video_params)
     render :new if @video.invalid?
   end
 
