@@ -22,6 +22,9 @@ header {
   height: 54px;
   background-color: #9F81F7;
 }
+a.right_header {
+  margin-left: auto;
+}
 header ul {
   margin: 0 auto;
   list-style: none;
