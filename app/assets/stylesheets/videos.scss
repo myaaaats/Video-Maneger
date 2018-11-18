@@ -16,20 +16,27 @@
 }
 
 .box {
-    background: #FBEFF2;
-    width: 1000px;
-    margin:  2rem auto;
+  width: 320px;
+  margin:  2rem auto;
 }
+
 .box .box-title {
-    font-size: 1.2em;
-    background: #F7819F;
-    padding: 4px;
-    text-align: center;
-    color: #FFF;
-    font-weight: bold;
-    letter-spacing: 0.05em;
+  font-size: 1.2em;
+  background: #190707;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
+
 .box p {
-    padding: 15px 5px;
-    margin: 0;
+  padding: 15px 5px;
+  margin: 0;
+}
+
+iframe {
+    border-width: 0px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
 }
