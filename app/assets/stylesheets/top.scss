@@ -7,7 +7,7 @@
 }
 
 div.row {
-  margin-left: 15%;
+  margin-left: 20%;
 }
 .main {
   margin-top: 150px;
@@ -15,7 +15,7 @@ div.row {
 }
 
 .icon__image {
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 85px;
   margin-right: 85px;
   margin-bottom: 30px;
@@ -23,6 +23,7 @@ div.row {
 
 .top__image {
   float: left;
+  margin-right: 30px;
 }
 
 p {
@@ -46,10 +47,19 @@ p {
   border-radius: 3px;
   margin-top: 20px;
 }
+
 .square_btn:active {/*ボタンを押したとき*/
   -ms-transform: translateY(4px);
   -webkit-transform: translateY(4px);
   transform: translateY(4px);/*下に動く*/
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
   border-bottom: none;
+}
+
+div.h2 {
+  margin-top: 200px;
+}
+
+div.h4 {
+  margin-top: 50px;
 }
