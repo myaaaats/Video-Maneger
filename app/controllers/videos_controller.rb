@@ -17,6 +17,8 @@ class VideosController < ApplicationController
 
   def create
     @video = current_user.videos.build(video_params)
+    @video.url.sub!(/open\?id=/, "file/d/")
+    @video.url << "/preview"
     if @video.save
       redirect_to videos_path, notice: "ビデオメモを作成しました！"
     else
