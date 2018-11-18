@@ -13,11 +13,11 @@
       <ul>
         <%= link_to image_tag("logo_small.png", height: 54), root_path %>
         <% if user_signed_in? %>
-          <%= link_to "ビデオメモ一覧", videos_path, class: "right_header" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "right_header" %>
+          <li class: "right_header"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li class: "right_header"><%= link_to "ビデオメモ一覧", videos_path %></li>
         <% else %>
-          <%= link_to "新規登録", new_user_registration_path %>
-          <%= link_to "ログイン", new_user_session_path %>
+          <li class: "right_header"><%= link_to "ログイン", new_user_session_path %></li>
+          <li class: "right_header"><%= link_to "新規登録", new_user_registration_path %></li>
         <% end %>
       </ul>
     </header>

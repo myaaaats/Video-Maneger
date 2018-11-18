@@ -14,6 +14,7 @@
  *= require_self
  *= require bootstrap/dist/css/bootstrap.min
  */
+
 html {
   min-height: 100%;
   position: relative;
@@ -22,8 +23,9 @@ header {
   height: 54px;
   background-color: #9F81F7;
 }
-a.right_header {
-  margin-left: auto;
+li {
+  text-align: right;
+  float: right;
 }
 header ul {
   margin: 0 auto;
