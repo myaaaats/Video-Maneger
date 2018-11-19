@@ -1,19 +1,23 @@
 <div class="index">
-  <h1>動画一覧</h1>
-  <% @videos.each do |video| %>
-    <div class="box">
-      <div class="box-title">
-        <%= video.status %>
-        <iframe src="<%= video.url %>" width="320" height="240"></iframe>
-        <div class="top_bottom">
-          <span class="h4"><%= video.title %></span>
-          <%= link_to image_tag("delete.png", height: 22), video_path(video.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
-          <%= link_to image_tag("edit.png", height: 22), edit_video_path(video.id) %>
-          <%= link_to image_tag("show.png", height: 22), video_path(video.id) %>
+  <div class="row">
+    <h1>動画一覧</h1>
+    <% @videos.each do |video| %>
+      <div class="col-md-4 col-xs-12">
+        <div class="box">
+          <div class="box-title">
+            <%= video.status %>
+            <iframe src="<%= video.url %>" width="320" height="240"></iframe>
+            <div class="top_bottom">
+              <span class="h4"><%= video.title %></span>
+              <%= link_to image_tag("delete.png", height: 22), video_path(video.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+              <%= link_to image_tag("edit.png", height: 22), edit_video_path(video.id) %>
+              <%= link_to image_tag("show.png", height: 22), video_path(video.id) %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
   <%= paginate @videos %>
   <div class="new_botan">
     <%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %>
