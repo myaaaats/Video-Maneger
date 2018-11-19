@@ -35,8 +35,25 @@
 }
 
 iframe {
-    border-width: 0px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
+  border-width: 0px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+.top_bottom, img {
+  padding-bottom: 5px;
+}
+
+float_right, img {
+  float: right;
+}
+
+img {
+  margin-right: 10px;
+}
+
+div.top_bottom {
+  text-align: left;
+  margin-left: 15px;
 }
