@@ -10,9 +10,11 @@
             <iframe src="<%= video.url %>" width="320" height="240"></iframe>
             <div class="top_bottom">
               <span class="h4"><%= video.title %></span>
-              <%= link_to image_tag("delete.png", height: 22), video_path(video.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
-              <%= link_to image_tag("edit.png", height: 22), edit_video_path(video.id) %>
-              <%= link_to image_tag("show.png", height: 22), video_path(video.id) %>
+              <div class="float_right">
+                <%= link_to image_tag("show.png", height: 22),video_path(video.id) %>
+                <%= link_to image_tag("edit.png", height: 22),edit_video_path(video.id) %>
+                <%= link_to image_tag("delete.png", height: 22), video_path(video.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+              </div>
             </div>
           </div>
         </div>
