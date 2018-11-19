@@ -1,0 +1,67 @@
+.row .main{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.main {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.icon__image {
+  margin-top: 150px;
+  margin-left: 85px;
+  margin-right: 85px;
+  margin-bottom: 30px;
+}
+
+.top__image {
+  float: left;
+  margin-right: 30px;
+}
+
+p {
+  display: inline-block;
+  padding-left: 105px;
+  padding-right: 105px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.description {
+  padding-bottom: 100px;
+}
+
+.square_btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: #9F81F7;
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.square_btn:active {/*ボタンを押したとき*/
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+div.h2 {
+  margin-top: 200px;
+}
+
+div.h4 {
+  margin-top: 50px;
+}
+
+div.row1 {
+  padding-left: 18%;
+}

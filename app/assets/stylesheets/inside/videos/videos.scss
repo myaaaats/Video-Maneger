@@ -1,0 +1,59 @@
+// Place all the styles related to the videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.index {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.new_botan {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.padding-20px {
+  padding: 20px;
+}
+
+.box {
+  width: 320px;
+  margin:  2rem auto;
+}
+
+.box .box-title {
+  font-size: 1.2em;
+  background: #190707;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.box p {
+  padding: 15px 5px;
+  margin: 0;
+}
+
+iframe {
+  border-width: 0px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+.top_bottom, img {
+  padding-bottom: 5px;
+}
+
+float_right, img {
+  float: right;
+}
+
+img {
+  margin-right: 10px;
+}
+
+div.top_bottom {
+  text-align: left;
+  margin-left: 15px;
+}
