@@ -11,18 +11,20 @@
     </div>
   <% end %>
 
-  <div class="video_title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="video_title form-group">
+    <div class="h3">タイトル</div>
+    <%= form.text_field :title, class: "form-control form_width" %>
   </div>
-  <div class="video_url">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
+  <div class="video_url form-group">
+    <div class="h3">URL</div>
+    <%= form.text_field :url, class: "form-control form_width" %>
   </div>
-  <div class="video_status">
-    <%= form.label :status %>
-    <%= form.select :status, [["準備中", "準備中"], ["準備完了", "準備完了"], ["Youtube投稿済み", "Youtube投稿済み"]] %>
+  <div class="video_status form-group">
+    <div class="h3">ステータス</div>
+    <%= form.select :status, [["準備中", "準備中"], ["準備完了", "準備完了"], ["Youtube投稿済み", "Youtube投稿済み"]], {}, {:class => "form-control form_width"} %>
   </div>
-  <%= form.submit %>
+  <div class="margin_top50">
+    <%= form.submit :class=>"square_btn" %>
+  </div>
 <% end %>
-<%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default" %>
+<%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default margin_bottom100 margin_top50" %>
