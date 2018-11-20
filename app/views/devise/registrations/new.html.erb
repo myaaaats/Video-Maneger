@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center margin_bottom200">
   <h2>サインアップ</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "サインアップ" %>
+      <%= f.submit "サインアップ", :class=>"btn btn-default margin_top50" %>
     </div>
   <% end %>
 
