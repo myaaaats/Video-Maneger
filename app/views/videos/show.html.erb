@@ -11,10 +11,12 @@
     </div>
   </div>
   <%= render partial: 'comments/form', locals: { comment: @comment, video: @video } %>
-  <div class="padding-20px">
-    <%= link_to '編集', edit_video_path(@video), class: "btn btn-warning" %> |
-    <%= link_to '戻る', videos_path, class: "btn btn-primary" %>
+  <div class="padding-20px margin_bottom50">
+    <%= link_to '編集', edit_video_path(@video), class: "btn btn-default" %> |
+    <%= link_to '戻る', videos_path, class: "btn btn-default" %>
   </div>
-  <p><%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %></p>
-  <p><%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default" %></p>
+  <div class="margin_bottom200">
+    <p><%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %></p>
+    <p><%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default" %></p>
+  </div>
 </div>
