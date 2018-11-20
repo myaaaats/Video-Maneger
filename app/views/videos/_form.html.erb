@@ -3,11 +3,9 @@
   <% if @video.errors.any? %>
     <div id="error_explanation">
       <h2><%= @video.errors.count %>件のエラーがあります。</h2>
-      <ul>
-         <% @video.errors.full_messages.each do |msg| %>
-           <li><%= msg %></li>
-         <% end %>
-      </ul>
+      <% @video.errors.full_messages.each do |msg| %>
+      <span><%= msg %></br></span>
+      <% end %>
     </div>
   <% end %>
 
