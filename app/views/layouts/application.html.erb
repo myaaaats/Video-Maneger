@@ -15,6 +15,7 @@
         <%= link_to image_tag("logo_small.png", height: 54), root_path %>
         <% if user_signed_in? %>
           <li class: "right_header"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li class: "right_header"><%= link_to "お気に入り一覧", favorites_path %></li>
           <li class: "right_header"><%= link_to "メモ一覧", videos_path %></li>
           <li class: "right_header"><%= link_to "メモ投稿", new_video_path %></li>
         <% else %>

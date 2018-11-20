@@ -1,0 +1,30 @@
+<div class="index">
+  <div class="row">
+    <div class="center">
+      <div class="h2">あなたのお気に入りした投稿</div>
+      <% @favorites.each do |favorite| %>
+        <div class="col-md-4 col-xs-12">
+          <div class="box">
+            <div class="box-title">
+              <%= favorite.video.status %>
+              <iframe src="<%= favorite.video.url %>" width="320" height="240"></iframe>
+              <div class="top_bottom">
+                <span class="h4"><%= favorite.video.title %></span>
+                <div class="float_right">
+                  <%= link_to image_tag("show.png", height: 22),video_path(favorite.video.id) %>
+                  <%= link_to image_tag("edit.png", height: 22),edit_video_path(favorite.video.id) %>
+                  <%= link_to image_tag("delete.png", height: 22), video_path(favorite.video.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= paginate @favorites %>
+    <div class="margin_bottom200">
+      <p><%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %></p>
+      <p><%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default" %></p>
+    </div>
+</div>
