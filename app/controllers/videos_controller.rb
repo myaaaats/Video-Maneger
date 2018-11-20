@@ -30,7 +30,6 @@ class VideosController < ApplicationController
   def show
     @comments = @video.comments
     @comment = @video.comments.build
-    @favorite = current_user.favorites.find_by(video_id: @video.id)
   end
 
   def edit
