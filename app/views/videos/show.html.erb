@@ -9,14 +9,14 @@
   <% else %>
     <%= link_to 'お気に入りする', favorites_path(video_id: @video.id), method: :post, class: 'btn btn-primary' %>
   <% end %>
-  <div>
+  <div class="margin_top50">
     <h2>コメント一覧</h2>
     <div id="comments_area">
       <%= render partial: 'comments/index', locals: { comments: @comments, video: @video } %>
     </div>
   </div>
   <%= render partial: 'comments/form', locals: { comment: @comment, video: @video } %>
-  <div class="padding-20px margin_bottom50">
+  <div class="padding-20px margin_bottom50 margin_top50">
     <%= link_to '編集', edit_video_path(@video), class: "btn btn-default" %> |
     <%= link_to '戻る', videos_path, class: "btn btn-default" %>
   </div>
