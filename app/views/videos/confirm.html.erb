@@ -7,16 +7,21 @@
     <%= form.hidden_field :url %>
     <%= form.hidden_field :status %>
 
-    <div><p>タイトル:<%= @video.title %></p></div>
-    <div><p>URL:<%= @video.url %></p></div>
-    <div><p>ステータス:<%= @video.status %></p></div>
-    <%= form.submit  "登録する" %>
+    <div class="margin_bottom200">
+      <div class="margin_top50"><p>タイトル:<%= @video.title %></p></div>
+      <% url = @video.url %>
+      <% url.sub!(/open\?id=/, "file/d/") %>
+      <% url << "/preview" %>
+      <div><iframe src="<%= url %>" width="320" height="240" ></iframe><div>
+      <div class=""><p>ステータス:<%= @video.status %></p></div>
+      <%= form.submit "登録する", :class=>"square_btn" %>
+    </div>
   <% end %>
 
   <%= form_with(model: @video, url: new_video_path, local: true, method: 'get') do |form| %>
     <%= form.hidden_field :title %>
     <%= form.hidden_field :url %>
     <%= form.hidden_field :status %>
-    <%= form.submit "もどる", name: 'back' %>
+    <%= form.submit "もどる", name: 'back', :class=>"btn btn-default margin_top50" %>
   <% end %>
 </div>
