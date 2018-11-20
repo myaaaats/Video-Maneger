@@ -20,6 +20,7 @@ class VideosController < ApplicationController
     @video.url.sub!(/open\?id=/, "file/d/")
     @video.url << "/preview"
     if @video.save
+      PostMailer.post_mail(@video).deliver
       redirect_to videos_path, notice: "ビデオメモを作成しました！"
     else
       render 'new'
