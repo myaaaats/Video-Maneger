@@ -4,6 +4,10 @@ class VideosController < ApplicationController
   before_action :own_video?, only: [:show, :edit, :update, :destroy]
 
   def index
+    @videos = Video.where(user_id: current_user.id).reverse_order.page(params[:page]).per(6)
+  end
+
+  def filter
     if params[:id]
       if params[:id] == "pre"
         @videos = Video.where(user_id: current_user.id).reverse_order.where(status: "準備中").page(params[:page]).per(6)
@@ -15,6 +19,7 @@ class VideosController < ApplicationController
     else
       @videos = Video.where(user_id: current_user.id).reverse_order.page(params[:page]).per(6)
     end
+    render 'index'
   end
 
   def new
@@ -56,6 +61,7 @@ class VideosController < ApplicationController
 
   def destroy
     @video.destroy
+    params[:id] == "delete"
     redirect_to videos_path, notice:"ビデオメモを削除しました！"
   end
 

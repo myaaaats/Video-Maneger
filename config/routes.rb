@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :videos do
     resources :comments
-    get 'index', on: :member
+    get 'filter', on: :member
     collection do
       post :confirm
     end
