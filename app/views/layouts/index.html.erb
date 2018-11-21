@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%= stylesheet_link_tag "inside/app", :media => "all" %>
+<html>
+  <head>
+    <title>VideoManager</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <li class: "right_header"><%= link_to "ログイン", new_user_session_path %></li>
+    <% if notice %>
+      <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+    <footer>
+      <p>運営会社SATOMAYA</p>
+      <p>©︎2018-2019 video memo</p>
+    </footer>
+  </body>
+</html>
