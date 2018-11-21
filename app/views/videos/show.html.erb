@@ -4,11 +4,11 @@
     <h4>タイトル</h4><%= @video.title %>
     <h4>ステータス</h4><%= @video.status %>
     <div><iframe src="<%= @video.url %>" width="640" height="480"></iframe><div>
-    <% if @video.image %>
+    <% if @video.image.url %>
       <div>
-      <div><h4>動画編集に使用する画像:</h4>
-        <%= image_tag @video.image, :width => "640" %>
-      </div>
+        <div><h4>動画編集に使用する画像:</h4>
+          <%= image_tag @video.image, :width => "640" %>
+        </div>
     <% end %>
   </div>
   <% if @favorite.present? %>
