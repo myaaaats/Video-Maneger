@@ -21,6 +21,11 @@
     <div class="h3">ステータス</div>
     <%= form.select :status, [["準備中", "準備中"], ["準備完了", "準備完了"], ["Youtube投稿済み", "Youtube投稿済み"]], {}, {:class => "form-control form_width"} %>
   </div>
+  <div class="video_status form-group">
+    <div class="h3">動画編集に使用する画像</div>
+    <%= image_tag @video.image, :width => "640" if @video.image %>
+    <%= form.file_field :image, class: "form-controll form_width center" %>
+  </div>
   <div class="margin_top50">
     <%= form.submit :class=>"square_btn" %>
   </div>

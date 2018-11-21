@@ -1,8 +1,15 @@
 <div class="center">
   <h1>ビデオメモ詳細画面</h1>
   <div class="show">
-    <div class="h3"><%= @video.title %></div>
+    <h4>タイトル</h4><%= @video.title %>
+    <h4>ステータス</h4><%= @video.status %>
     <div><iframe src="<%= @video.url %>" width="640" height="480"></iframe><div>
+    <% if @video.image %>
+      <div>
+      <div><h4>動画編集に使用する画像:</h4>
+        <%= image_tag @video.image, :width => "640" %>
+      </div>
+    <% end %>
   </div>
   <% if @favorite.present? %>
     <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>

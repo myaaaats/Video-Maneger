@@ -56,7 +56,7 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:title, :url, :status)
+    params.require(:video).permit(:title, :url, :status, :image, :image_cache)
   end
 
   def set_video
