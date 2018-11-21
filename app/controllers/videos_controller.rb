@@ -4,7 +4,17 @@ class VideosController < ApplicationController
   before_action :own_video?, only: [:show, :edit, :update, :destroy]
 
   def index
-    @videos = Video.where(user_id: current_user.id).reverse_order.page(params[:page]).per(6)
+    if params[:id]
+      if params[:id] == "pre"
+        @videos = Video.where(user_id: current_user.id).reverse_order.where(status: "準備中").page(params[:page]).per(6)
+      elsif params[:id] == "pre_done"
+        @videos = Video.where(user_id: current_user.id).reverse_order.where(status: "準備完了").page(params[:page]).per(6)
+      elsif params[:id] == "posted"
+        @videos = Video.where(user_id: current_user.id).reverse_order.where(status: "Youtube投稿済み").page(params[:page]).per(6)
+      end
+    else
+      @videos = Video.where(user_id: current_user.id).reverse_order.page(params[:page]).per(6)
+    end
   end
 
   def new
