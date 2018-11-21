@@ -1,5 +1,4 @@
 .main {
-  margin-top: 150px;
   text-align: center;
 }
 
@@ -45,4 +44,30 @@ div.h4 {
 
 .use_bottom {
   margin-bottom: 250px;
+}
+
+.right {
+  text-align: right;
+  margin-right: 20px;
+}
+.background {
+  width: 100%;
+  height: 0;
+  padding-top: calc(80 / 1000 * 100%); 
+  padding-bottom: calc(120 / 1000 * 100%); 
+  background: image-url('music.jpg') center center / cover no-repeat;;
+  max-width: 100%;
+  height: auto;
+}
+.opacity_btn {
+  opacity: 0.8;
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #000000;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin-top: 20px;
+  font-size: 1.6em;
 }

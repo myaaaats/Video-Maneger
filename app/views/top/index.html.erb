@@ -1,14 +1,16 @@
 <%= stylesheet_link_tag "inside/top", :media => "all" %>
-<div class="main">
-  <div class="row">
-    <div class="col-md-6 col-xs-12">
-      <%= image_tag 'logo.png', :size => '400x180' %></br>
-      <%= link_to '動画管理を始める', new_video_path, :class => 'square_btn' %>
-    </div>
-    <div class="col-md-6 col-xs-12">
-      <%= image_tag 'music.jpg', :size => '400x250' %>
+<div class="background row center">
+  <div class="right">
+  </div>
+  <div class="">
+    <div class="col-md-6"><%= image_tag 'logo_small.png', :size => '600x150' %></div>
+    <div class="col-md-6">
+      <%= link_to '新規登録をして動画管理を始める', new_video_path, :class => 'opacity_btn' %>
+      <div><%= link_to "ログイン", new_user_session_path, :class => 'square_btn' %></div>
     </div>
   </div>
+</div>
+<div class="main">
   <div class="clear">
     <div class="h2">動画投稿をスマートにしよう</div>
     <div class="h4">Youtube Creater's は動画投稿準備の状況管理ができるアプリです</div>
