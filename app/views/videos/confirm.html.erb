@@ -15,10 +15,13 @@
       <% url << "/preview" %>
       <div><iframe src="<%= url %>" width="320" height="240" ></iframe><div>
       <div class=""><h4>ステータス:</h4><%= @video.status %></div>
-      <div><h4>動画編集に使用する画像:</h4>
-        <%= image_tag @video.image, :width => "320" %>
-      </div>
-      <%= form.submit "登録する", :class=>"square_btn" %>
+      <% if @video.image.url %>
+        <div>
+          <div><h4>動画編集に使用する画像:</h4>
+            <%= image_tag @video.image, :width => "640" %>
+          </div>
+        </div>
+      <% end %>
     </div>
   <% end %>
 
