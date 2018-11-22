@@ -6,7 +6,9 @@ class CommentsController < ApplicationController
       if @comment.save
         format.js { render :index }
       else
-        format.html { redirect_to video_path(@video), notice: '投稿できませんでした...' }
+        #error.js.erb（textボックスの枠を赤くするなど）ものを動かす
+        format.js { render :error }
+        #format.html { redirect_to video_path(@video), notice: '投稿できませんでした...' }
       end
     end
   end
@@ -14,6 +16,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
+    #comment投稿したときみたいにindex.js.erbを呼ぶ
     redirect_to video_path(@comment.video_id), notice:"コメントを削除しました！"
   end
 

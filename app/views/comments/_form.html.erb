@@ -10,9 +10,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <div><%= form.label :content %></div>
-    <div><%= form.text_area :content %></div>
+  <div class="field" id="form_color">
+    <div><%= form.label :content, {class: 'control-label'} %></div>
+    <div><%= form.text_area :content, {class: 'form-control'} %></div>
   </div>
 
   <div class="actions">
