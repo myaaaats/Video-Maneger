@@ -1,16 +1,17 @@
 <div class="center">
-  <h2>パスワードをお忘れですか？</h2>
-
+  <div class="margin_top50 margin_bottom50">
+    <h2>パスワードをお忘れですか？</h2>
+  </div>
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field form-group form_width">
+      <%= f.label :email,{class: 'control-label'} %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "パスワードをリセットする" %>
+    <div class="actions margin_bottom50">
+      <%= f.submit "パスワードをリセットする", :class=>"btn btn-default" %>
     </div>
   <% end %>
 

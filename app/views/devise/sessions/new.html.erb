@@ -1,29 +1,30 @@
 <div class="center">
-  <h2>ログイン</h2>
-
+  <div class="margin_top50 margin_bottom50">
+    <h2>ログイン</h2>
+  </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field form-group form_width">
+      <%= f.label :email,{class: 'control-label'} %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
     </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+    <div class="field form-group form_width">
+      <%= f.label :password,{class: 'control-label'} %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
-      <div class="field">
+      <div class="field form-group">
         <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <%= f.label :remember_me,{class: 'control-label'} %>
       </div>
     <% end -%>
 
     <div class="actions">
-      <%= f.submit "ログイン", :class=>"margin_bottom200 btn-default" %>
+      <%= f.submit "ログイン", :class=>"margin_bottom200 btn btn-default" %>
     </div>
   <% end %>
-  <div class="margin_bottom200">
+  <div class="margin_bottom200 margin_top50">
     <%= render "devise/shared/links" %>
   </div>
 </div>

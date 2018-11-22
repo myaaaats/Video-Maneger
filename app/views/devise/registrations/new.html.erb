@@ -1,28 +1,29 @@
 <div class="center margin_bottom200">
-  <h2>サインアップ</h2>
-
+  <div class="margin_top50 margin_bottom50">
+    <h2>サインアップ</h2>
+  </div>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field form-group form_width">
+      <%= f.label :email,{class: 'control-label'} %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
     </div>
 
-    <div class="field">
-      <%= f.label :password %>
+    <div class="field form-group form_width">
+      <%= f.label :password,{class: 'control-label'} %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> 文字以上で入力してください)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
     </div>
 
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <div class="field form-group form_width">
+      <%= f.label :password_confirmation,{class: 'control-label'} %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
     </div>
 
-    <div class="actions">
+    <div class="actions margin_bottom50">
       <%= f.submit "サインアップ", :class=>"btn btn-default margin_top50" %>
     </div>
   <% end %>
