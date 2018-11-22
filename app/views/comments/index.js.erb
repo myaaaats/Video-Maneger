@@ -1,2 +1,7 @@
 $("#comments_area").html("<%= j(render 'comments/index', { comments: @comment.video.comments, video: @comment.video }) %>")
 $("textarea").val('')
+var element = document.getElementById("form_color");
+element.classList.remove( "has-error" );
+var help = document.getElementById("form_help");
+help.style = 'display:none';
+help.classList.remove("help-block");
