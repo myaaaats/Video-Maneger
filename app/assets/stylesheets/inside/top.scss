@@ -33,9 +33,21 @@ div.h2 {
   padding-top: 100px;
 }
 
+div.h1 {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 2rem;
+  width: 600px;
+  background: image-url('back.jpeg');
+}
+
 div.h4 {
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+div.h5 {
+  margin-top: 50px;
 }
 
 .use {
@@ -55,7 +67,7 @@ div.h4 {
   height: 0;
   padding-top: calc(80 / 1000 * 100%); 
   padding-bottom: calc(120 / 1000 * 100%); 
-  background: image-url('music.jpg') center center / cover no-repeat;;
+  background: image-url('music.jpg') center center / cover no-repeat;
   max-width: 100%;
   height: auto;
 }
@@ -70,4 +82,7 @@ div.h4 {
   border-radius: 3px;
   margin-top: 20px;
   font-size: 1.6em;
+}
+.pop {
+  color: #9F81F7;
 }
