@@ -7,6 +7,9 @@
       <h4>タイトル</h4><%= @video.title %>
     </div>
     <div class="margin_bottom50">
+      <h4>投稿日時</h4><%= @video.created_at.strftime("%Y-%m-%d %H:%M") %>
+    </div>
+    <div class="margin_bottom50">
       <h4>ステータス</h4><%= @video.status %>
     </div>
     <div><iframe src="<%= @video.url %>" width="640" height="480"></iframe><div>
