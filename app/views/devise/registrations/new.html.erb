@@ -7,7 +7,7 @@
 
     <div class="field form-group form_width">
       <%= f.label :email,{class: 'control-label'} %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control margin_bottom50' %>
     </div>
 
     <div class="field form-group form_width">
@@ -15,7 +15,7 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> 文字以上で入力してください)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+      <%= f.password_field :password, autocomplete: "new-password", class: 'form-control margin_bottom50' %>
     </div>
 
     <div class="field form-group form_width">
