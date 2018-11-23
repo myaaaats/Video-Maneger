@@ -40,6 +40,6 @@
     <%= link_to '戻る', videos_path, class: "btn btn-default" %>
   </div>
   <div class="margin_bottom200">
-    <p><%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %></p>
+    <p><%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default", data: {"turbolinks" => false} %></p>
   </div>
 </div>

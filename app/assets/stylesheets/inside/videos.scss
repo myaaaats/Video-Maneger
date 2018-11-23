@@ -71,7 +71,7 @@ div.top_bottom {
   margin-bottom: 200px;
 }
 .margin_bottom50 {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 .sample_select {
   width:200px;
@@ -92,4 +92,9 @@ div.top_bottom {
   padding:8px 0 10px;
   color:#fff;
   background-color:#C0C0C0;
+}
+.xs_size {
+  width: 500px;
+  margin: 0 auto;
+  height: 44px;
 }

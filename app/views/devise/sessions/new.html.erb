@@ -3,18 +3,18 @@
     <h2>ログイン</h2>
   </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field form-group form_width">
+    <div id="size_1" class="field form-group form_width">
       <%= f.label :email,{class: 'control-label'} %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control margin_bottom50' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "width_1", class: 'form-control margin_bottom50' %>
     </div>
 
-    <div class="field form-group form_width">
+    <div id="size_2" class="field form-group form_width">
       <%= f.label :password,{class: 'control-label'} %><br />
-      <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+      <%= f.password_field :password, autocomplete: "current-password", id: "width_2", class: 'form-control' %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
-      <div class="field form-group">
+      <div id="size_3" class="field form-group form_width">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me,{class: 'control-label'} %>
       </div>
@@ -28,3 +28,57 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
+<script>
+  let screen = window.parent.screen.width;
+  let pc = 992;
+  if (screen <= pc){
+    var size_1 = document.getElementById("size_1");
+    if (size_1){
+      size_1.classList.remove("form_width");
+      size_1.classList.add("xs_size");
+      size_1.classList.add("margin_bottom50");
+    }
+    var size_2 = document.getElementById("size_2");
+    if (size_2){
+      size_2.classList.remove("form_width");
+      size_2.classList.add("xs_size");
+      size_2.classList.add("margin_bottom50");
+    }
+    var size_3 = document.getElementById("size_3");
+    if (size_3){
+      size_3.classList.remove("form_width");
+      size_3.classList.add("xs_size");
+      size_3.classList.add("margin_bottom50");
+    }
+    var width_1 = document.getElementById("width_1");
+    if (width_1){
+      width_1.classList.remove("form_width");
+      width_1.classList.add("xs_size");
+    }
+    var width_2 = document.getElementById("width_2");
+    if (width_2){
+      width_2.classList.remove("form_width");
+      width_2.classList.add("xs_size");
+    }
+    var width_3 = document.getElementById("width_3");
+    if (width_3){
+      width_3.classList.remove("form_width");
+      width_3.classList.add("xs_size");
+    }
+    var email = document.getElementById("user_email");
+    if (email){
+      email.classList.remove("form_width");
+      email.classList.add("xs_size");
+    }
+    var pass1 = document.getElementById("user_password");
+    if (pass1){
+      pass1.classList.remove("form_width");
+      pass1.classList.add("xs_size");
+    }
+    var pass2 = document.getElementById("user_password_confirmation");
+    if (pass2){
+      pass2.classList.remove("form_width");
+      pass2.classList.add("xs_size");
+    }
+  }
+</script>

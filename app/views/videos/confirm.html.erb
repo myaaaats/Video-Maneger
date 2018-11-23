@@ -32,6 +32,6 @@
     <%= form.hidden_field :title %>
     <%= form.hidden_field :url %>
     <%= form.hidden_field :status %>
-    <%= form.submit "もどる", name: 'back', :class=>"btn btn-default margin_top50" %>
+    <%= form.submit "もどる", name: 'back', :class=>"btn btn-default margin_top50", data: {"turbolinks" => false} %>
   <% end %>
 </div>

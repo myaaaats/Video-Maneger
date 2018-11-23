@@ -11,15 +11,15 @@
 
   <div class="video_title form-group">
     <div class="h3">タイトル</div>
-    <%= form.text_field :title, class: "form-control form_width" %>
+    <%= form.text_field :title, id:"size_1", class: "form-control form_width" %>
   </div>
   <div class="video_url form-group">
     <div class="h3">URL</div>
-    <%= form.text_field :url, class: "form-control form_width" %>
+    <%= form.text_field :url, id:"size_2", class: "form-control form_width" %>
   </div>
   <div class="video_status form-group">
     <div class="h3">ステータス</div>
-    <%= form.select :status, [["準備中", "準備中"], ["準備完了", "準備完了"], ["Youtube投稿済み", "Youtube投稿済み"]], {}, {:class => "form-control form_width"} %>
+    <%= form.select "status", [["準備中", "準備中"], ["準備完了", "準備完了"], ["Youtube投稿済み", "Youtube投稿済み"]], {},{:class => "form-control form_width", :id=>"size_3"} %>
   </div>
   <div class="video_status form-group margin_top50">
     <div class="h3">動画編集に使用する画像</div>
@@ -31,3 +31,24 @@
   </div>
 <% end %>
 <%= link_to 'ビデオメモ一覧画面にもどる', videos_path, class: "btn btn-default margin_bottom100 margin_top50" %>
+<script>
+  let screen = window.parent.screen.width;
+  let pc = 992;
+  if (screen <= pc){
+    var size_1 = document.getElementById("size_1");
+    if (size_1){
+      size_1.classList.remove("form_width");
+      size_1.classList.add("xs_size");
+    }
+    var size_2 = document.getElementById("size_2");
+    if (size_2){
+      size_2.classList.remove("form_width");
+      size_2.classList.add("xs_size");
+    }
+    var size_3 = document.getElementById("size_3");
+    if (size_3){
+      size_3.classList.remove("form_width");
+      size_3.classList.add("xs_size");
+    }
+  }
+</script>

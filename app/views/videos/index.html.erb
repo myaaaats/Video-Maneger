@@ -25,6 +25,6 @@
   </div>
   <%= paginate @videos %>
   <div class="new_botan">
-    <%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default" %>
+    <%= link_to '新しく動画メモを投稿する', new_video_path, class: "btn btn-default", data: {"turbolinks" => false} %>
   </div>
 </div>
