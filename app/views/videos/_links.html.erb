@@ -1,0 +1,23 @@
+<div class="margin_top50 margin_bottom50">
+  <% if params[:id] == "pre" %>
+    <%= link_to 'ALL', videos_path, class: "sample btn" %>
+    <%= link_to '準備中', filter_video_path('pre'), class: "sample_select btn" %>
+    <%= link_to '準備完了', filter_video_path('pre_done'), class: "sample btn" %>
+    <%= link_to 'Youtube投稿済み', filter_video_path('posted'), class: "sample btn" %>
+  <% elsif params[:id] == "pre_done" %>
+    <%= link_to 'ALL', videos_path, class: "sample btn" %>
+    <%= link_to '準備中', filter_video_path('pre'), class: "sample btn" %>
+    <%= link_to '準備完了', filter_video_path('pre_done'), class: "sample_select btn" %>
+    <%= link_to 'Youtube投稿済み', filter_video_path('posted'), class: "sample btn" %>
+  <% elsif params[:id] == "posted" %>
+    <%= link_to 'ALL', videos_path, class: "sample btn" %>
+    <%= link_to '準備中', filter_video_path('pre'), class: "sample btn" %>
+    <%= link_to '準備完了', filter_video_path('pre_done'), class: "sample btn" %>
+    <%= link_to 'Youtube投稿済み', filter_video_path('posted'), class: "sample_select btn" %>
+  <% else %>
+    <%= link_to 'ALL', videos_path, class: "sample_select btn" %>
+    <%= link_to '準備中', filter_video_path('pre'), class: "sample btn" %>
+    <%= link_to '準備完了', filter_video_path('pre_done'), class: "sample btn" %>
+    <%= link_to 'Youtube投稿済み', filter_video_path('posted'), class: "sample btn" %>
+  <% end %>
+</div>
