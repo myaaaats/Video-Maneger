@@ -3,7 +3,8 @@ class Video < ApplicationRecord
   validates :url,      length: { in: 1..400 }
   validates :url,      format: /\A#{URI::regexp(%w(http https))}\z/
   validates :url,      :uniqueness => {:scope => [:user_id], message: 'は既に投稿されたものです'}
-  validates :url,      inclusion: { in: %w(google drive), message: "はGoogleドライブのURLではありません。" }
+  validates :url,      format: { with: /google/ }
+  validates :url,      format: { with: /drive/ }
   validates :status,   length: { in: 1..11 }
   belongs_to :user
   has_many :comments,  dependent: :destroy
